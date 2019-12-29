@@ -1,0 +1,2355 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "skeleton",
+    "license": {
+      "name": "MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/armazens": {
+      "get": {
+        "operationId": "getarmazens",
+        "summary": "Get armazens List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/armazensList"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      },
+      "post": {
+        "operationId": "postarmazens",
+        "summary": "Post armazens List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      }
+    },
+    "/armazens/{id}": {
+      "get": {
+        "operationId": "getarmazensbyID",
+        "summary": "Get armazens by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/armazens"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deletearmazensbyID",
+        "summary": "Delete armazens by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patcharmazensbyID",
+        "summary": "Patch armazens by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "putarmazensbyID",
+        "summary": "Put armazens by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      }
+    },
+    "/artigos": {
+      "get": {
+        "operationId": "getartigos",
+        "summary": "Get artigos List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/artigosList"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      },
+      "post": {
+        "operationId": "postartigos",
+        "summary": "Post artigos List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      }
+    },
+    "/artigos/{id}": {
+      "get": {
+        "operationId": "getartigosbyID",
+        "summary": "Get artigos by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/artigos"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deleteartigosbyID",
+        "summary": "Delete artigos by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patchartigosbyID",
+        "summary": "Patch artigos by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "putartigosbyID",
+        "summary": "Put artigos by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      }
+    },
+    "/caracteristicas": {
+      "get": {
+        "operationId": "getcaracteristicas",
+        "summary": "Get caracteristicas List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/caracteristicasList"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      },
+      "post": {
+        "operationId": "postcaracteristicas",
+        "summary": "Post caracteristicas List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      }
+    },
+    "/caracteristicas/{id}": {
+      "get": {
+        "operationId": "getcaracteristicasbyID",
+        "summary": "Get caracteristicas by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/caracteristicas"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deletecaracteristicasbyID",
+        "summary": "Delete caracteristicas by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patchcaracteristicasbyID",
+        "summary": "Patch caracteristicas by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "putcaracteristicasbyID",
+        "summary": "Put caracteristicas by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      }
+    },
+    "/caracterizar": {
+      "get": {
+        "operationId": "getcaracterizar",
+        "summary": "Get caracterizar List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/caracterizarList"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      },
+      "post": {
+        "operationId": "postcaracterizar",
+        "summary": "Post caracterizar List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      }
+    },
+    "/caracterizar/{id}": {
+      "get": {
+        "operationId": "getcaracterizarbyID",
+        "summary": "Get caracterizar by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/caracterizar"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deletecaracterizarbyID",
+        "summary": "Delete caracterizar by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patchcaracterizarbyID",
+        "summary": "Patch caracterizar by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "putcaracterizarbyID",
+        "summary": "Put caracterizar by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      }
+    },
+    "/error": {
+      "get": {
+        "operationId": "geterror",
+        "summary": "Get error List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/errorList"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      },
+      "post": {
+        "operationId": "posterror",
+        "summary": "Post error List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      }
+    },
+    "/error/{id}": {
+      "get": {
+        "operationId": "geterrorbyID",
+        "summary": "Get error by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/error"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deleteerrorbyID",
+        "summary": "Delete error by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patcherrorbyID",
+        "summary": "Patch error by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "puterrorbyID",
+        "summary": "Put error by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      }
+    },
+    "/inventarios": {
+      "get": {
+        "operationId": "getinventarios",
+        "summary": "Get inventarios List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/inventariosList"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      },
+      "post": {
+        "operationId": "postinventarios",
+        "summary": "Post inventarios List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      }
+    },
+    "/inventarios/{id}": {
+      "get": {
+        "operationId": "getinventariosbyID",
+        "summary": "Get inventarios by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/inventarios"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deleteinventariosbyID",
+        "summary": "Delete inventarios by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patchinventariosbyID",
+        "summary": "Patch inventarios by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "putinventariosbyID",
+        "summary": "Put inventarios by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      }
+    },
+    "/locais": {
+      "get": {
+        "operationId": "getlocais",
+        "summary": "Get locais List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/locaisList"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      },
+      "post": {
+        "operationId": "postlocais",
+        "summary": "Post locais List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      }
+    },
+    "/locais/{id}": {
+      "get": {
+        "operationId": "getlocaisbyID",
+        "summary": "Get locais by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/locais"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deletelocaisbyID",
+        "summary": "Delete locais by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patchlocaisbyID",
+        "summary": "Patch locais by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "putlocaisbyID",
+        "summary": "Put locais by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      }
+    },
+    "/movimentos": {
+      "get": {
+        "operationId": "getmovimentos",
+        "summary": "Get movimentos List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/movimentosList"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      },
+      "post": {
+        "operationId": "postmovimentos",
+        "summary": "Post movimentos List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      }
+    },
+    "/movimentos/{id}": {
+      "get": {
+        "operationId": "getmovimentosbyID",
+        "summary": "Get movimentos by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/movimentos"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deletemovimentosbyID",
+        "summary": "Delete movimentos by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patchmovimentosbyID",
+        "summary": "Patch movimentos by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "putmovimentosbyID",
+        "summary": "Put movimentos by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      }
+    },
+    "/tipos": {
+      "get": {
+        "operationId": "gettipos",
+        "summary": "Get tipos List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/tiposList"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      },
+      "post": {
+        "operationId": "posttipos",
+        "summary": "Post tipos List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      }
+    },
+    "/tipos/{id}": {
+      "get": {
+        "operationId": "gettiposbyID",
+        "summary": "Get tipos by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/tipos"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deletetiposbyID",
+        "summary": "Delete tipos by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patchtiposbyID",
+        "summary": "Patch tipos by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "puttiposbyID",
+        "summary": "Put tipos by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      }
+    },
+    "/unidades": {
+      "get": {
+        "operationId": "getunidades",
+        "summary": "Get unidades List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/unidadesList"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      },
+      "post": {
+        "operationId": "postunidades",
+        "summary": "Post unidades List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      }
+    },
+    "/unidades/{id}": {
+      "get": {
+        "operationId": "getunidadesbyID",
+        "summary": "Get unidades by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/unidades"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deleteunidadesbyID",
+        "summary": "Delete unidades by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patchunidadesbyID",
+        "summary": "Patch unidades by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "putunidadesbyID",
+        "summary": "Put unidades by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      }
+    },
+    "/users": {
+      "get": {
+        "operationId": "getusers",
+        "summary": "Get users List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/usersList"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      },
+      "post": {
+        "operationId": "postusers",
+        "summary": "Post users List",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        }
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "operationId": "getusersbyID",
+        "summary": "Get users by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/users"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "deleteusersbyID",
+        "summary": "Delete users by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "patchusersbyID",
+        "summary": "Patch users by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      },
+      "put": {
+        "operationId": "putusersbyID",
+        "summary": "Put users by ID",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Success"
+          },
+          "400": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "500": {
+            "$ref": "#/components/responses/Default"
+          },
+          "default": {
+            "$ref": "#/components/responses/Default"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/id"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "description": "Default Error Response Container",
+        "properties": {
+          "code": {
+            "format": "int32",
+            "type": "integer"
+          },
+          "message": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object"
+      },
+      "armazens": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Nome"
+            },
+            "maxLength": 80
+          }
+        },
+        "x-ls": {
+          "belongsTo": {},
+          "hasMany": {
+            "armazem_id": {
+              "name": "armazem_fk",
+              "columnName": "armazem_id",
+              "tableName": "Locais",
+              "referencedTableName": "Armazens",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          }
+        }
+      },
+      "artigos": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Nome"
+            },
+            "maxLength": 80
+          },
+          "tipo_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "unidade_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "qt_max_mov": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "Quantidade máxima de movimentação"
+            }
+          },
+          "freq_inv": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "Frequencia de inventário"
+            }
+          }
+        },
+        "x-ls": {
+          "belongsTo": {
+            "tipo_id": {
+              "name": "tipo_fk",
+              "columnName": "tipo_id",
+              "tableName": "Artigos",
+              "referencedTableName": "Tipos",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "unidade_id": {
+              "name": "unidade_fk",
+              "columnName": "unidade_id",
+              "tableName": "Artigos",
+              "referencedTableName": "Unidades",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          },
+          "hasMany": {
+            "artigo_id": {
+              "name": "artigos_fk",
+              "columnName": "artigo_id",
+              "tableName": "Movimentos",
+              "referencedTableName": "Artigos",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          }
+        }
+      },
+      "caracteristicas": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Nome"
+            },
+            "maxLength": 80
+          },
+          "unidade": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Unidade"
+            },
+            "maxLength": 80
+          },
+          "tipo_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "Tipo"
+            }
+          }
+        },
+        "x-ls": {
+          "belongsTo": {
+            "tipo_id": {
+              "name": "FK_tipos_id",
+              "columnName": "tipo_id",
+              "tableName": "Caracteristicas",
+              "referencedTableName": "Tipos",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          },
+          "hasMany": {
+            "caracteristica_id": {
+              "name": "caracteristica_fk",
+              "columnName": "caracteristica_id",
+              "tableName": "Caracterizar",
+              "referencedTableName": "Caracteristicas",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          }
+        }
+      },
+      "caracterizar": {
+        "type": "object",
+        "properties": {
+          "caracteristica_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "artigo_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "valor": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Valor"
+            },
+            "maxLength": 80
+          }
+        },
+        "x-ls": {
+          "belongsTo": {
+            "caracteristica_id": {
+              "name": "caracteristica_fk",
+              "columnName": "caracteristica_id",
+              "tableName": "Caracterizar",
+              "referencedTableName": "Caracteristicas",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "artigo_id": {
+              "name": "caracterizar_artigos_fk",
+              "columnName": "artigo_id",
+              "tableName": "Caracterizar",
+              "referencedTableName": "Artigos",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          },
+          "hasMany": {}
+        }
+      },
+      "inventarios": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Data"
+            }
+          },
+          "artigo_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "local_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "qt_prevista": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "Qt. Prevista"
+            }
+          },
+          "qt_actual": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "Qt. Actual"
+            }
+          },
+          "obs": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Observações"
+            },
+            "maxLength": 65535
+          }
+        },
+        "x-ls": {
+          "belongsTo": {
+            "artigo_id": {
+              "name": "artigo_fk",
+              "columnName": "artigo_id",
+              "tableName": "Inventarios",
+              "referencedTableName": "Artigos",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "local_id": {
+              "name": "local_fk",
+              "columnName": "local_id",
+              "tableName": "Inventarios",
+              "referencedTableName": "Locais",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          },
+          "hasMany": {}
+        }
+      },
+      "locais": {
+        "type": "object",
+        "properties": {
+          "armazem_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "nome": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Nome"
+            },
+            "maxLength": 80
+          },
+          "descricao": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Descrição"
+            },
+            "maxLength": 120
+          }
+        },
+        "x-ls": {
+          "belongsTo": {
+            "armazem_id": {
+              "name": "armazem_fk",
+              "columnName": "armazem_id",
+              "tableName": "Locais",
+              "referencedTableName": "Armazens",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          },
+          "hasMany": {
+            "local_id": {
+              "name": "locais_fk",
+              "columnName": "local_id",
+              "tableName": "Movimentos",
+              "referencedTableName": "Locais",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          }
+        }
+      },
+      "movimentos": {
+        "type": "object",
+        "properties": {
+          "e_s": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Entrada/Saída"
+            },
+            "maxLength": 1
+          },
+          "artigo_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "local_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "user_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "data": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Data"
+            }
+          },
+          "qt": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "Quantidade"
+            }
+          },
+          "obs": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Observações"
+            },
+            "maxLength": 65535
+          }
+        },
+        "x-ls": {
+          "belongsTo": {
+            "artigo_id": {
+              "name": "artigos_fk",
+              "columnName": "artigo_id",
+              "tableName": "Movimentos",
+              "referencedTableName": "Artigos",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "local_id": {
+              "name": "locais_fk",
+              "columnName": "local_id",
+              "tableName": "Movimentos",
+              "referencedTableName": "Locais",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "user_id": {
+              "name": "users_fk",
+              "columnName": "user_id",
+              "tableName": "Movimentos",
+              "referencedTableName": "Users",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          },
+          "hasMany": {}
+        }
+      },
+      "tipos": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Nome"
+            },
+            "maxLength": 80
+          }
+        },
+        "x-ls": {
+          "belongsTo": {},
+          "hasMany": {
+            "tipo_id": {
+              "name": "FK_tipos_id",
+              "columnName": "tipo_id",
+              "tableName": "Caracteristicas",
+              "referencedTableName": "Tipos",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          }
+        }
+      },
+      "unidades": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Nome"
+            },
+            "maxLength": 80
+          }
+        },
+        "x-ls": {
+          "belongsTo": {},
+          "hasMany": {
+            "unidade_id": {
+              "name": "unidade_fk",
+              "columnName": "unidade_id",
+              "tableName": "Artigos",
+              "referencedTableName": "Unidades",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          }
+        }
+      },
+      "users": {
+        "type": "object",
+        "properties": {
+          "tenant_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "role_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "name": {
+            "type": "string",
+            "x-ls": {
+              "desc": ""
+            },
+            "maxLength": 191
+          },
+          "email": {
+            "type": "string",
+            "x-ls": {
+              "desc": ""
+            },
+            "maxLength": 191
+          },
+          "is_verified": {
+            "type": "integer",
+            "x-ls": {
+              "desc": ""
+            }
+          },
+          "password": {
+            "type": "string",
+            "x-ls": {
+              "desc": ""
+            },
+            "maxLength": 191
+          },
+          "remember_token": {
+            "type": "string",
+            "x-ls": {
+              "desc": ""
+            },
+            "maxLength": 100
+          }
+        },
+        "x-ls": {
+          "belongsTo": {},
+          "hasMany": {
+            "user_id": {
+              "name": "users_fk",
+              "columnName": "user_id",
+              "tableName": "Movimentos",
+              "referencedTableName": "Users",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "Default": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        },
+        "description": "Unexpected Error"
+      },
+      "Deleted": {
+        "description": "The resource was deleted successfully."
+      },
+      "Image": {
+        "content": {
+          "image/*": {
+            "schema": {
+              "format": "binary",
+              "type": "string"
+            }
+          }
+        },
+        "description": "An image."
+      },
+      "NotFound": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        },
+        "description": "The specified resource was not found"
+      },
+      "Success": {
+        "description": "Success"
+      },
+      "Unauthorized": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        },
+        "description": "Unauthorized"
+      },
+      "armazens": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/armazens"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "armazensList": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/armazens"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "artigos": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/artigos"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "artigosList": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/artigos"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "caracteristicas": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/caracteristicas"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "caracteristicasList": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/caracteristicas"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "caracterizar": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/caracterizar"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "caracterizarList": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/caracterizar"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "error": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/error"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "errorList": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/error"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "inventarios": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/inventarios"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "inventariosList": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/inventarios"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "locais": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/locais"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "locaisList": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/locais"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "movimentos": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/movimentos"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "movimentosList": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/movimentos"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "tipos": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/tipos"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "tiposList": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/tipos"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "unidades": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/unidades"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "unidadesList": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/unidades"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "users": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/users"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "usersList": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "items": {
+                "$ref": "#/components/schemas/users"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "description": "Ok"
+      }
+    },
+    "parameters": {
+      "entity": {
+        "description": "entity",
+        "in": "path",
+        "name": "entity",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "id": {
+        "description": "Entity by Id",
+        "in": "path",
+        "name": "id",
+        "required": true,
+        "schema": {
+          "type": "integer"
+        }
+      },
+      "include": {
+        "description": "Related model associations to include",
+        "explode": true,
+        "in": "query",
+        "name": "include",
+        "required": false,
+        "schema": {
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "limit": {
+        "description": "Maximum number of items to return.",
+        "in": "query",
+        "name": "limit",
+        "required": false,
+        "schema": {
+          "format": "int32",
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "offset": {
+        "description": "Number of items to skip before returning the results.",
+        "in": "query",
+        "name": "offset",
+        "required": false,
+        "schema": {
+          "default": 0,
+          "format": "int32",
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "order": {
+        "description": "Order By paramater",
+        "in": "query",
+        "name": "order",
+        "required": false,
+        "schema": {
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "query": {
+        "description": "Queriable set",
+        "explode": true,
+        "in": "query",
+        "name": "query",
+        "required": false,
+        "schema": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}
