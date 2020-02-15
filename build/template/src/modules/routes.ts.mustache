@@ -1,1 +1,23 @@
-routes
+import { 
+    list{{schema}},
+    post{{schema}},
+    get{{schema}},
+    delete{{schema}}
+    } from "./schema"
+
+export default function healthHandler(server, options, next) {
+  server.get("/{{schema}}", { schema: list{{schema}} }, (req, res) => {
+    res.send({ status: "ok" })
+  })
+  server.post("/{{schema}}", { schema: post{{schema}} }, (req, res) => {
+    res.send({ status: "ok" })
+  })
+  server.get("/{{schema}}/:id", { schema: get{{schema}} }, (req, res) => {
+    res.send({ status: "ok" })
+  })
+  server.delete("/{{schema}}/:id", { schema: delete{{schema}} }, (req, res) => {
+    res.send({ status: "ok" })
+  })
+
+  next()
+}
