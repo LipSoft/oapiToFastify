@@ -22,17 +22,17 @@ rimraf.sync(path.normalize(path.join(__dirname, '../../test/build/common/dist'))
 describe('#common()', function () {
   describe('#loadYamlFile()', function () {
     it('should return js Object ', () => assert.deepStrictEqual(loadYamlFile('../../test/build/common/loadYamlFile.yaml'), require('../../test/build/common/loadYamlFile.json')))
-    it('should return js Object ', () => assert.deepStrictEqual(loadYamlFile('..\\..\\test\\build\\common\\loadYamlFile.yaml'), require('../../test/build/common/loadYamlFile.json')))
+    // it('should return js Object ', () => assert.deepStrictEqual(loadYamlFile('..\\..\\test\\build\\common\\loadYamlFile.yaml'), require('../../test/build/common/loadYamlFile.json')))
   })
 
   describe('#loadTemplate()', function () {
     it('should return Template ', () => assert.deepStrictEqual(loadTemplate('../../test/build/common/template.mustache'), 'oapiToFastify is {{{word}}}'))
-    it('should return Template ', () => assert.deepStrictEqual(loadTemplate('..\\..\\test\\build\\common\\template.mustache'), 'oapiToFastify is {{{word}}}'))
+    // it('should return Template ', () => assert.deepStrictEqual(loadTemplate('..\\..\\test\\build\\common\\template.mustache'), 'oapiToFastify is {{{word}}}'))
   })
 
   describe('#render()', function () {
     it('should return render template ', () => assert.deepStrictEqual(render(loadTemplate('../../test/build/common/template.mustache'), { word: 'Awesome' }), 'oapiToFastify is Awesome'))
-    it('should return render template ', () => assert.deepStrictEqual(render(loadTemplate('..\\..\\test\\build\\common\\template.mustache'), { word: 'Awesome' }), 'oapiToFastify is Awesome'))
+    // it('should return render template ', () => assert.deepStrictEqual(render(loadTemplate('..\\..\\test\\build\\common\\template.mustache'), { word: 'Awesome' }), 'oapiToFastify is Awesome'))
   })
 
   describe('#saveFile()', function () {

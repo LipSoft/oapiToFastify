@@ -1,1 +1,39 @@
-entity
+import {Entity, PrimaryGeneratedColumn,Column,CreateDateColumn,UpdateDateColumn,OneToMany,ManyToOne,JoinColumn} from "typeorm"
+{{#imports}}
+import { {{{.}}} } from "../{{{.}}}/entity"
+{{/imports}}
+{{#belongsTo}}
+import { {{{referencedTableName}}} } from "../{{{referencedTableName}}}/entity"
+{{/belongsTo}}
+{{#hasMany}}
+import { {{{tableName}}} } from "../{{{tableName}}}/entity"
+{{/hasMany}}
+
+//assocs
+
+@Entity()
+export class {{schema}} {
+  @PrimaryGeneratedColumn()
+  id: number
+
+  {{#belongsTo}}
+  @ManyToOne(type => {{{referencedTableName}}}, {{{referencedTableName}}} => {{{referencedTableName}}}.{{{tableName}}})
+  {{{referencedTableName}}}: {{{referencedTableName}}}
+
+  {{/belongsTo}}
+  {{#hasMany}}
+  @OneToMany(type => {{{tableName}}}, {{{tableName}}} => {{{tableName}}}.{{{referencedTableName}}})
+  {{{tableName}}}: {{{tableName}}}[]
+
+  {{/hasMany}}
+  {{#fields}}
+  @Column()
+  {{{name}}}: {{{type}}}
+
+  {{/fields}}
+  @CreateDateColumn()
+  created_at: string
+
+  @UpdateDateColumn()
+  updated_at: string
+}

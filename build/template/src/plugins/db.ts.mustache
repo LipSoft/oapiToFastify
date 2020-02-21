@@ -1,15 +1,18 @@
 import "reflect-metadata"
 import fp from "fastify-plugin"
 import { createConnection, getConnectionOptions } from "typeorm"
+{{#Modules}}
+import { {{{name}}} } from "../modules/{{{name}}}/entity"
+{{/Modules}}
 //import { Inventory } from "../modules/inventory/entity"
-//import { Product } from "../modules/products/entity"
+
 
 export default fp(async server => {
   try {
     const connectionOptions = await getConnectionOptions()
     Object.assign(connectionOptions, {
       options: { encrypt: true },
-      //entities: [Inventory, Product]
+      entities: [{{#Modules}}{{{name}}},{{/Modules}}]
     })
 
     console.log(`connecting to database: ${connectionOptions.type}...`)
@@ -17,6 +20,9 @@ export default fp(async server => {
     console.log("database connected")
 
     server.decorate("db", {
+      {{#Modules}}        
+        {{{name}}}: connection.getRepository({{{name}}}),
+      {{/Modules}}
       // inventory: connection.getRepository(Inventory),
       // products: connection.getRepository(Product)
     })

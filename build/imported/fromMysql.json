@@ -13,13 +13,13 @@
     }
   ],
   "paths": {
-    "/armazens": {
+    "/Clients": {
       "get": {
-        "operationId": "getarmazens",
-        "summary": "Get armazens List",
+        "operationId": "getClients",
+        "summary": "Get Clients List",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/armazensList"
+            "$ref": "#/components/responses/ClientsList"
           },
           "400": {
             "$ref": "#/components/responses/NotFound"
@@ -30,11 +30,18 @@
           "default": {
             "$ref": "#/components/responses/Default"
           }
+        },
+        "x-ls": {
+          "service": "CRUD",
+          "method": "List"
         }
       },
       "post": {
-        "operationId": "postarmazens",
-        "summary": "Post armazens List",
+        "operationId": "postClients",
+        "summary": "Post Clients List",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/Clients"
+        },
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -48,16 +55,23 @@
           "default": {
             "$ref": "#/components/responses/Default"
           }
+        },
+        "x-ls": {
+          "service": "CRUD",
+          "method": "Post",
+          "args": [
+            "body"
+          ]
         }
       }
     },
-    "/armazens/{id}": {
+    "/Clients/{id}": {
       "get": {
-        "operationId": "getarmazensbyID",
-        "summary": "Get armazens by ID",
+        "operationId": "getClientsbyID",
+        "summary": "Get Clients by ID",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/armazens"
+            "$ref": "#/components/responses/Clients"
           },
           "400": {
             "$ref": "#/components/responses/NotFound"
@@ -73,11 +87,18 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "getOne",
+          "args": [
+            "id"
+          ]
+        }
       },
       "delete": {
-        "operationId": "deletearmazensbyID",
-        "summary": "Delete armazens by ID",
+        "operationId": "deleteClientsbyID",
+        "summary": "Delete Clients by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -96,11 +117,18 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "delete",
+          "args": [
+            "id"
+          ]
+        }
       },
       "patch": {
-        "operationId": "patcharmazensbyID",
-        "summary": "Patch armazens by ID",
+        "operationId": "patchClientsbyID",
+        "summary": "Patch Clients by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -119,11 +147,19 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "patch",
+          "args": [
+            "id",
+            "body"
+          ]
+        }
       },
       "put": {
-        "operationId": "putarmazensbyID",
-        "summary": "Put armazens by ID",
+        "operationId": "putClientsbyID",
+        "summary": "Put Clients by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -142,16 +178,24 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "put",
+          "args": [
+            "id",
+            "body"
+          ]
+        }
       }
     },
-    "/artigos": {
+    "/Projects": {
       "get": {
-        "operationId": "getartigos",
-        "summary": "Get artigos List",
+        "operationId": "getProjects",
+        "summary": "Get Projects List",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/artigosList"
+            "$ref": "#/components/responses/ProjectsList"
           },
           "400": {
             "$ref": "#/components/responses/NotFound"
@@ -162,11 +206,18 @@
           "default": {
             "$ref": "#/components/responses/Default"
           }
+        },
+        "x-ls": {
+          "service": "CRUD",
+          "method": "List"
         }
       },
       "post": {
-        "operationId": "postartigos",
-        "summary": "Post artigos List",
+        "operationId": "postProjects",
+        "summary": "Post Projects List",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/Projects"
+        },
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -180,16 +231,23 @@
           "default": {
             "$ref": "#/components/responses/Default"
           }
+        },
+        "x-ls": {
+          "service": "CRUD",
+          "method": "Post",
+          "args": [
+            "body"
+          ]
         }
       }
     },
-    "/artigos/{id}": {
+    "/Projects/{id}": {
       "get": {
-        "operationId": "getartigosbyID",
-        "summary": "Get artigos by ID",
+        "operationId": "getProjectsbyID",
+        "summary": "Get Projects by ID",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/artigos"
+            "$ref": "#/components/responses/Projects"
           },
           "400": {
             "$ref": "#/components/responses/NotFound"
@@ -205,11 +263,18 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "getOne",
+          "args": [
+            "id"
+          ]
+        }
       },
       "delete": {
-        "operationId": "deleteartigosbyID",
-        "summary": "Delete artigos by ID",
+        "operationId": "deleteProjectsbyID",
+        "summary": "Delete Projects by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -228,11 +293,18 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "delete",
+          "args": [
+            "id"
+          ]
+        }
       },
       "patch": {
-        "operationId": "patchartigosbyID",
-        "summary": "Patch artigos by ID",
+        "operationId": "patchProjectsbyID",
+        "summary": "Patch Projects by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -251,11 +323,19 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "patch",
+          "args": [
+            "id",
+            "body"
+          ]
+        }
       },
       "put": {
-        "operationId": "putartigosbyID",
-        "summary": "Put artigos by ID",
+        "operationId": "putProjectsbyID",
+        "summary": "Put Projects by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -274,16 +354,24 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "put",
+          "args": [
+            "id",
+            "body"
+          ]
+        }
       }
     },
-    "/caracteristicas": {
+    "/Settings": {
       "get": {
-        "operationId": "getcaracteristicas",
-        "summary": "Get caracteristicas List",
+        "operationId": "getSettings",
+        "summary": "Get Settings List",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/caracteristicasList"
+            "$ref": "#/components/responses/SettingsList"
           },
           "400": {
             "$ref": "#/components/responses/NotFound"
@@ -294,11 +382,18 @@
           "default": {
             "$ref": "#/components/responses/Default"
           }
+        },
+        "x-ls": {
+          "service": "CRUD",
+          "method": "List"
         }
       },
       "post": {
-        "operationId": "postcaracteristicas",
-        "summary": "Post caracteristicas List",
+        "operationId": "postSettings",
+        "summary": "Post Settings List",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/Settings"
+        },
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -312,16 +407,23 @@
           "default": {
             "$ref": "#/components/responses/Default"
           }
+        },
+        "x-ls": {
+          "service": "CRUD",
+          "method": "Post",
+          "args": [
+            "body"
+          ]
         }
       }
     },
-    "/caracteristicas/{id}": {
+    "/Settings/{id}": {
       "get": {
-        "operationId": "getcaracteristicasbyID",
-        "summary": "Get caracteristicas by ID",
+        "operationId": "getSettingsbyID",
+        "summary": "Get Settings by ID",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/caracteristicas"
+            "$ref": "#/components/responses/Settings"
           },
           "400": {
             "$ref": "#/components/responses/NotFound"
@@ -337,11 +439,18 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "getOne",
+          "args": [
+            "id"
+          ]
+        }
       },
       "delete": {
-        "operationId": "deletecaracteristicasbyID",
-        "summary": "Delete caracteristicas by ID",
+        "operationId": "deleteSettingsbyID",
+        "summary": "Delete Settings by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -360,11 +469,18 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "delete",
+          "args": [
+            "id"
+          ]
+        }
       },
       "patch": {
-        "operationId": "patchcaracteristicasbyID",
-        "summary": "Patch caracteristicas by ID",
+        "operationId": "patchSettingsbyID",
+        "summary": "Patch Settings by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -383,11 +499,19 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "patch",
+          "args": [
+            "id",
+            "body"
+          ]
+        }
       },
       "put": {
-        "operationId": "putcaracteristicasbyID",
-        "summary": "Put caracteristicas by ID",
+        "operationId": "putSettingsbyID",
+        "summary": "Put Settings by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -406,16 +530,24 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "put",
+          "args": [
+            "id",
+            "body"
+          ]
+        }
       }
     },
-    "/caracterizar": {
+    "/Tenants": {
       "get": {
-        "operationId": "getcaracterizar",
-        "summary": "Get caracterizar List",
+        "operationId": "getTenants",
+        "summary": "Get Tenants List",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/caracterizarList"
+            "$ref": "#/components/responses/TenantsList"
           },
           "400": {
             "$ref": "#/components/responses/NotFound"
@@ -426,11 +558,18 @@
           "default": {
             "$ref": "#/components/responses/Default"
           }
+        },
+        "x-ls": {
+          "service": "CRUD",
+          "method": "List"
         }
       },
       "post": {
-        "operationId": "postcaracterizar",
-        "summary": "Post caracterizar List",
+        "operationId": "postTenants",
+        "summary": "Post Tenants List",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/Tenants"
+        },
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -444,16 +583,23 @@
           "default": {
             "$ref": "#/components/responses/Default"
           }
+        },
+        "x-ls": {
+          "service": "CRUD",
+          "method": "Post",
+          "args": [
+            "body"
+          ]
         }
       }
     },
-    "/caracterizar/{id}": {
+    "/Tenants/{id}": {
       "get": {
-        "operationId": "getcaracterizarbyID",
-        "summary": "Get caracterizar by ID",
+        "operationId": "getTenantsbyID",
+        "summary": "Get Tenants by ID",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/caracterizar"
+            "$ref": "#/components/responses/Tenants"
           },
           "400": {
             "$ref": "#/components/responses/NotFound"
@@ -469,11 +615,18 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "getOne",
+          "args": [
+            "id"
+          ]
+        }
       },
       "delete": {
-        "operationId": "deletecaracterizarbyID",
-        "summary": "Delete caracterizar by ID",
+        "operationId": "deleteTenantsbyID",
+        "summary": "Delete Tenants by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -492,11 +645,18 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "delete",
+          "args": [
+            "id"
+          ]
+        }
       },
       "patch": {
-        "operationId": "patchcaracterizarbyID",
-        "summary": "Patch caracterizar by ID",
+        "operationId": "patchTenantsbyID",
+        "summary": "Patch Tenants by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -515,11 +675,19 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "patch",
+          "args": [
+            "id",
+            "body"
+          ]
+        }
       },
       "put": {
-        "operationId": "putcaracterizarbyID",
-        "summary": "Put caracterizar by ID",
+        "operationId": "putTenantsbyID",
+        "summary": "Put Tenants by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -538,16 +706,24 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "put",
+          "args": [
+            "id",
+            "body"
+          ]
+        }
       }
     },
-    "/error": {
+    "/Users": {
       "get": {
-        "operationId": "geterror",
-        "summary": "Get error List",
+        "operationId": "getUsers",
+        "summary": "Get Users List",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/errorList"
+            "$ref": "#/components/responses/UsersList"
           },
           "400": {
             "$ref": "#/components/responses/NotFound"
@@ -558,11 +734,18 @@
           "default": {
             "$ref": "#/components/responses/Default"
           }
+        },
+        "x-ls": {
+          "service": "CRUD",
+          "method": "List"
         }
       },
       "post": {
-        "operationId": "posterror",
-        "summary": "Post error List",
+        "operationId": "postUsers",
+        "summary": "Post Users List",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/Users"
+        },
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -576,16 +759,23 @@
           "default": {
             "$ref": "#/components/responses/Default"
           }
+        },
+        "x-ls": {
+          "service": "CRUD",
+          "method": "Post",
+          "args": [
+            "body"
+          ]
         }
       }
     },
-    "/error/{id}": {
+    "/Users/{id}": {
       "get": {
-        "operationId": "geterrorbyID",
-        "summary": "Get error by ID",
+        "operationId": "getUsersbyID",
+        "summary": "Get Users by ID",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/error"
+            "$ref": "#/components/responses/Users"
           },
           "400": {
             "$ref": "#/components/responses/NotFound"
@@ -601,11 +791,18 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "getOne",
+          "args": [
+            "id"
+          ]
+        }
       },
       "delete": {
-        "operationId": "deleteerrorbyID",
-        "summary": "Delete error by ID",
+        "operationId": "deleteUsersbyID",
+        "summary": "Delete Users by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -624,11 +821,18 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "delete",
+          "args": [
+            "id"
+          ]
+        }
       },
       "patch": {
-        "operationId": "patcherrorbyID",
-        "summary": "Patch error by ID",
+        "operationId": "patchUsersbyID",
+        "summary": "Patch Users by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -647,11 +851,19 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "patch",
+          "args": [
+            "id",
+            "body"
+          ]
+        }
       },
       "put": {
-        "operationId": "puterrorbyID",
-        "summary": "Put error by ID",
+        "operationId": "putUsersbyID",
+        "summary": "Put Users by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -670,16 +882,24 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "put",
+          "args": [
+            "id",
+            "body"
+          ]
+        }
       }
     },
-    "/inventarios": {
+    "/Work": {
       "get": {
-        "operationId": "getinventarios",
-        "summary": "Get inventarios List",
+        "operationId": "getWork",
+        "summary": "Get Work List",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/inventariosList"
+            "$ref": "#/components/responses/WorkList"
           },
           "400": {
             "$ref": "#/components/responses/NotFound"
@@ -690,11 +910,18 @@
           "default": {
             "$ref": "#/components/responses/Default"
           }
+        },
+        "x-ls": {
+          "service": "CRUD",
+          "method": "List"
         }
       },
       "post": {
-        "operationId": "postinventarios",
-        "summary": "Post inventarios List",
+        "operationId": "postWork",
+        "summary": "Post Work List",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/Work"
+        },
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -708,16 +935,23 @@
           "default": {
             "$ref": "#/components/responses/Default"
           }
+        },
+        "x-ls": {
+          "service": "CRUD",
+          "method": "Post",
+          "args": [
+            "body"
+          ]
         }
       }
     },
-    "/inventarios/{id}": {
+    "/Work/{id}": {
       "get": {
-        "operationId": "getinventariosbyID",
-        "summary": "Get inventarios by ID",
+        "operationId": "getWorkbyID",
+        "summary": "Get Work by ID",
         "responses": {
           "200": {
-            "$ref": "#/components/responses/inventarios"
+            "$ref": "#/components/responses/Work"
           },
           "400": {
             "$ref": "#/components/responses/NotFound"
@@ -733,11 +967,18 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "getOne",
+          "args": [
+            "id"
+          ]
+        }
       },
       "delete": {
-        "operationId": "deleteinventariosbyID",
-        "summary": "Delete inventarios by ID",
+        "operationId": "deleteWorkbyID",
+        "summary": "Delete Work by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -756,11 +997,18 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "delete",
+          "args": [
+            "id"
+          ]
+        }
       },
       "patch": {
-        "operationId": "patchinventariosbyID",
-        "summary": "Patch inventarios by ID",
+        "operationId": "patchWorkbyID",
+        "summary": "Patch Work by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -779,11 +1027,19 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "patch",
+          "args": [
+            "id",
+            "body"
+          ]
+        }
       },
       "put": {
-        "operationId": "putinventariosbyID",
-        "summary": "Put inventarios by ID",
+        "operationId": "putWorkbyID",
+        "summary": "Put Work by ID",
         "responses": {
           "200": {
             "$ref": "#/components/responses/Success"
@@ -802,667 +1058,15 @@
           {
             "$ref": "#/components/parameters/id"
           }
-        ]
-      }
-    },
-    "/locais": {
-      "get": {
-        "operationId": "getlocais",
-        "summary": "Get locais List",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/locaisList"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
+        ],
+        "x-ls": {
+          "service": "CRUD",
+          "method": "put",
+          "args": [
+            "id",
+            "body"
+          ]
         }
-      },
-      "post": {
-        "operationId": "postlocais",
-        "summary": "Post locais List",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        }
-      }
-    },
-    "/locais/{id}": {
-      "get": {
-        "operationId": "getlocaisbyID",
-        "summary": "Get locais by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/locais"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "delete": {
-        "operationId": "deletelocaisbyID",
-        "summary": "Delete locais by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "patch": {
-        "operationId": "patchlocaisbyID",
-        "summary": "Patch locais by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "put": {
-        "operationId": "putlocaisbyID",
-        "summary": "Put locais by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      }
-    },
-    "/movimentos": {
-      "get": {
-        "operationId": "getmovimentos",
-        "summary": "Get movimentos List",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/movimentosList"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        }
-      },
-      "post": {
-        "operationId": "postmovimentos",
-        "summary": "Post movimentos List",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        }
-      }
-    },
-    "/movimentos/{id}": {
-      "get": {
-        "operationId": "getmovimentosbyID",
-        "summary": "Get movimentos by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/movimentos"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "delete": {
-        "operationId": "deletemovimentosbyID",
-        "summary": "Delete movimentos by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "patch": {
-        "operationId": "patchmovimentosbyID",
-        "summary": "Patch movimentos by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "put": {
-        "operationId": "putmovimentosbyID",
-        "summary": "Put movimentos by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      }
-    },
-    "/tipos": {
-      "get": {
-        "operationId": "gettipos",
-        "summary": "Get tipos List",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/tiposList"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        }
-      },
-      "post": {
-        "operationId": "posttipos",
-        "summary": "Post tipos List",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        }
-      }
-    },
-    "/tipos/{id}": {
-      "get": {
-        "operationId": "gettiposbyID",
-        "summary": "Get tipos by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/tipos"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "delete": {
-        "operationId": "deletetiposbyID",
-        "summary": "Delete tipos by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "patch": {
-        "operationId": "patchtiposbyID",
-        "summary": "Patch tipos by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "put": {
-        "operationId": "puttiposbyID",
-        "summary": "Put tipos by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      }
-    },
-    "/unidades": {
-      "get": {
-        "operationId": "getunidades",
-        "summary": "Get unidades List",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/unidadesList"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        }
-      },
-      "post": {
-        "operationId": "postunidades",
-        "summary": "Post unidades List",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        }
-      }
-    },
-    "/unidades/{id}": {
-      "get": {
-        "operationId": "getunidadesbyID",
-        "summary": "Get unidades by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/unidades"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "delete": {
-        "operationId": "deleteunidadesbyID",
-        "summary": "Delete unidades by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "patch": {
-        "operationId": "patchunidadesbyID",
-        "summary": "Patch unidades by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "put": {
-        "operationId": "putunidadesbyID",
-        "summary": "Put unidades by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      }
-    },
-    "/users": {
-      "get": {
-        "operationId": "getusers",
-        "summary": "Get users List",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/usersList"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        }
-      },
-      "post": {
-        "operationId": "postusers",
-        "summary": "Post users List",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        }
-      }
-    },
-    "/users/{id}": {
-      "get": {
-        "operationId": "getusersbyID",
-        "summary": "Get users by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/users"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "delete": {
-        "operationId": "deleteusersbyID",
-        "summary": "Delete users by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "patch": {
-        "operationId": "patchusersbyID",
-        "summary": "Patch users by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
-      },
-      "put": {
-        "operationId": "putusersbyID",
-        "summary": "Put users by ID",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Success"
-          },
-          "400": {
-            "$ref": "#/components/responses/NotFound"
-          },
-          "500": {
-            "$ref": "#/components/responses/Default"
-          },
-          "default": {
-            "$ref": "#/components/responses/Default"
-          }
-        },
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/id"
-          }
-        ]
       }
     }
   },
@@ -1485,489 +1089,326 @@
         ],
         "type": "object"
       },
-      "armazens": {
+      "Clients": {
         "type": "object",
         "properties": {
-          "nome": {
+          "name": {
             "type": "string",
             "x-ls": {
-              "desc": "Nome"
+              "desc": "Name"
             },
-            "maxLength": 80
+            "maxLength": 200
+          },
+          "user_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "User"
+            }
+          },
+          "tenant_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "Tenant"
+            }
+          }
+        },
+        "x-ls": {
+          "belongsTo": {
+            "tenant_id-Clients": {
+              "name": "FK_C_Tenats",
+              "columnName": "tenant_id",
+              "tableName": "Clients",
+              "referencedTableName": "Tenants",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "user_id-Clients": {
+              "name": "FK_C_Users",
+              "columnName": "user_id",
+              "tableName": "Clients",
+              "referencedTableName": "Users",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          },
+          "hasMany": {
+            "client_id-Work": {
+              "name": "FK_W_Clients",
+              "columnName": "client_id",
+              "tableName": "Work",
+              "referencedTableName": "Clients",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          }
+        }
+      },
+      "Projects": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "x-ls": {
+              "desc": "Name"
+            },
+            "maxLength": 200
+          },
+          "user_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "User"
+            }
+          },
+          "tenant_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "Tenant"
+            }
+          }
+        },
+        "x-ls": {
+          "belongsTo": {
+            "tenant_id-Projects": {
+              "name": "FK_P_Tenants",
+              "columnName": "tenant_id",
+              "tableName": "Projects",
+              "referencedTableName": "Tenants",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "user_id-Projects": {
+              "name": "FK_P_Users",
+              "columnName": "user_id",
+              "tableName": "Projects",
+              "referencedTableName": "Users",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          },
+          "hasMany": {}
+        }
+      },
+      "Settings": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "User"
+            }
+          },
+          "tenant_id": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "Tenant"
+            }
+          }
+        },
+        "x-ls": {
+          "belongsTo": {
+            "tenant_id-Settings": {
+              "name": "FK_S_Tenants",
+              "columnName": "tenant_id",
+              "tableName": "Settings",
+              "referencedTableName": "Tenants",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "user_id-Settings": {
+              "name": "FK_S_Users",
+              "columnName": "user_id",
+              "tableName": "Settings",
+              "referencedTableName": "Users",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            }
+          },
+          "hasMany": {}
+        }
+      },
+      "Tenants": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "integer",
+            "x-ls": {
+              "desc": "Name"
+            }
           }
         },
         "x-ls": {
           "belongsTo": {},
           "hasMany": {
-            "armazem_id": {
-              "name": "armazem_fk",
-              "columnName": "armazem_id",
-              "tableName": "Locais",
-              "referencedTableName": "Armazens",
+            "tenant_id-Clients": {
+              "name": "FK_C_Tenats",
+              "columnName": "tenant_id",
+              "tableName": "Clients",
+              "referencedTableName": "Tenants",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "tenant_id-Projects": {
+              "name": "FK_P_Tenants",
+              "columnName": "tenant_id",
+              "tableName": "Projects",
+              "referencedTableName": "Tenants",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "tenant_id-Settings": {
+              "name": "FK_S_Tenants",
+              "columnName": "tenant_id",
+              "tableName": "Settings",
+              "referencedTableName": "Tenants",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "tenant_id-Users": {
+              "name": "FK_U_Tenants",
+              "columnName": "tenant_id",
+              "tableName": "Users",
+              "referencedTableName": "Tenants",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "tenant_id-Work": {
+              "name": "FK_W_Tenants",
+              "columnName": "tenant_id",
+              "tableName": "Work",
+              "referencedTableName": "Tenants",
               "referencedColumnName": "id",
               "summaryProperty": "id"
             }
           }
         }
       },
-      "artigos": {
+      "Users": {
         "type": "object",
         "properties": {
-          "nome": {
+          "name": {
             "type": "string",
             "x-ls": {
-              "desc": "Nome"
+              "desc": "Name"
             },
-            "maxLength": 80
+            "maxLength": 200
           },
-          "tipo_id": {
+          "tenant_id": {
             "type": "integer",
             "x-ls": {
-              "desc": ""
-            }
-          },
-          "unidade_id": {
-            "type": "integer",
-            "x-ls": {
-              "desc": ""
-            }
-          },
-          "qt_max_mov": {
-            "type": "integer",
-            "x-ls": {
-              "desc": "Quantidade máxima de movimentação"
-            }
-          },
-          "freq_inv": {
-            "type": "integer",
-            "x-ls": {
-              "desc": "Frequencia de inventário"
+              "desc": "Tenant"
             }
           }
         },
         "x-ls": {
           "belongsTo": {
-            "tipo_id": {
-              "name": "tipo_fk",
-              "columnName": "tipo_id",
-              "tableName": "Artigos",
-              "referencedTableName": "Tipos",
-              "referencedColumnName": "id",
-              "summaryProperty": "id"
-            },
-            "unidade_id": {
-              "name": "unidade_fk",
-              "columnName": "unidade_id",
-              "tableName": "Artigos",
-              "referencedTableName": "Unidades",
+            "tenant_id-Users": {
+              "name": "FK_U_Tenants",
+              "columnName": "tenant_id",
+              "tableName": "Users",
+              "referencedTableName": "Tenants",
               "referencedColumnName": "id",
               "summaryProperty": "id"
             }
           },
           "hasMany": {
-            "artigo_id": {
-              "name": "artigos_fk",
-              "columnName": "artigo_id",
-              "tableName": "Movimentos",
-              "referencedTableName": "Artigos",
+            "user_id-Clients": {
+              "name": "FK_C_Users",
+              "columnName": "user_id",
+              "tableName": "Clients",
+              "referencedTableName": "Users",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "user_id-Projects": {
+              "name": "FK_P_Users",
+              "columnName": "user_id",
+              "tableName": "Projects",
+              "referencedTableName": "Users",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "user_id-Settings": {
+              "name": "FK_S_Users",
+              "columnName": "user_id",
+              "tableName": "Settings",
+              "referencedTableName": "Users",
+              "referencedColumnName": "id",
+              "summaryProperty": "id"
+            },
+            "user_id-Work": {
+              "name": "FK_W_Users",
+              "columnName": "user_id",
+              "tableName": "Work",
+              "referencedTableName": "Users",
               "referencedColumnName": "id",
               "summaryProperty": "id"
             }
           }
         }
       },
-      "caracteristicas": {
+      "Work": {
         "type": "object",
         "properties": {
-          "nome": {
+          "name": {
             "type": "string",
             "x-ls": {
-              "desc": "Nome"
+              "desc": "Name"
             },
-            "maxLength": 80
+            "maxLength": 200
           },
-          "unidade": {
-            "type": "string",
-            "x-ls": {
-              "desc": "Unidade"
-            },
-            "maxLength": 80
-          },
-          "tipo_id": {
+          "desc": {
             "type": "integer",
             "x-ls": {
-              "desc": "Tipo"
-            }
-          }
-        },
-        "x-ls": {
-          "belongsTo": {
-            "tipo_id": {
-              "name": "FK_tipos_id",
-              "columnName": "tipo_id",
-              "tableName": "Caracteristicas",
-              "referencedTableName": "Tipos",
-              "referencedColumnName": "id",
-              "summaryProperty": "id"
-            }
-          },
-          "hasMany": {
-            "caracteristica_id": {
-              "name": "caracteristica_fk",
-              "columnName": "caracteristica_id",
-              "tableName": "Caracterizar",
-              "referencedTableName": "Caracteristicas",
-              "referencedColumnName": "id",
-              "summaryProperty": "id"
-            }
-          }
-        }
-      },
-      "caracterizar": {
-        "type": "object",
-        "properties": {
-          "caracteristica_id": {
-            "type": "integer",
-            "x-ls": {
-              "desc": ""
-            }
-          },
-          "artigo_id": {
-            "type": "integer",
-            "x-ls": {
-              "desc": ""
-            }
-          },
-          "valor": {
-            "type": "string",
-            "x-ls": {
-              "desc": "Valor"
-            },
-            "maxLength": 80
-          }
-        },
-        "x-ls": {
-          "belongsTo": {
-            "caracteristica_id": {
-              "name": "caracteristica_fk",
-              "columnName": "caracteristica_id",
-              "tableName": "Caracterizar",
-              "referencedTableName": "Caracteristicas",
-              "referencedColumnName": "id",
-              "summaryProperty": "id"
-            },
-            "artigo_id": {
-              "name": "caracterizar_artigos_fk",
-              "columnName": "artigo_id",
-              "tableName": "Caracterizar",
-              "referencedTableName": "Artigos",
-              "referencedColumnName": "id",
-              "summaryProperty": "id"
-            }
-          },
-          "hasMany": {}
-        }
-      },
-      "inventarios": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "string",
-            "x-ls": {
-              "desc": "Data"
-            }
-          },
-          "artigo_id": {
-            "type": "integer",
-            "x-ls": {
-              "desc": ""
-            }
-          },
-          "local_id": {
-            "type": "integer",
-            "x-ls": {
-              "desc": ""
-            }
-          },
-          "qt_prevista": {
-            "type": "integer",
-            "x-ls": {
-              "desc": "Qt. Prevista"
-            }
-          },
-          "qt_actual": {
-            "type": "integer",
-            "x-ls": {
-              "desc": "Qt. Actual"
-            }
-          },
-          "obs": {
-            "type": "string",
-            "x-ls": {
-              "desc": "Observações"
-            },
-            "maxLength": 65535
-          }
-        },
-        "x-ls": {
-          "belongsTo": {
-            "artigo_id": {
-              "name": "artigo_fk",
-              "columnName": "artigo_id",
-              "tableName": "Inventarios",
-              "referencedTableName": "Artigos",
-              "referencedColumnName": "id",
-              "summaryProperty": "id"
-            },
-            "local_id": {
-              "name": "local_fk",
-              "columnName": "local_id",
-              "tableName": "Inventarios",
-              "referencedTableName": "Locais",
-              "referencedColumnName": "id",
-              "summaryProperty": "id"
-            }
-          },
-          "hasMany": {}
-        }
-      },
-      "locais": {
-        "type": "object",
-        "properties": {
-          "armazem_id": {
-            "type": "integer",
-            "x-ls": {
-              "desc": ""
-            }
-          },
-          "nome": {
-            "type": "string",
-            "x-ls": {
-              "desc": "Nome"
-            },
-            "maxLength": 80
-          },
-          "descricao": {
-            "type": "string",
-            "x-ls": {
-              "desc": "Descrição"
-            },
-            "maxLength": 120
-          }
-        },
-        "x-ls": {
-          "belongsTo": {
-            "armazem_id": {
-              "name": "armazem_fk",
-              "columnName": "armazem_id",
-              "tableName": "Locais",
-              "referencedTableName": "Armazens",
-              "referencedColumnName": "id",
-              "summaryProperty": "id"
-            }
-          },
-          "hasMany": {
-            "local_id": {
-              "name": "locais_fk",
-              "columnName": "local_id",
-              "tableName": "Movimentos",
-              "referencedTableName": "Locais",
-              "referencedColumnName": "id",
-              "summaryProperty": "id"
-            }
-          }
-        }
-      },
-      "movimentos": {
-        "type": "object",
-        "properties": {
-          "e_s": {
-            "type": "string",
-            "x-ls": {
-              "desc": "Entrada/Saída"
-            },
-            "maxLength": 1
-          },
-          "artigo_id": {
-            "type": "integer",
-            "x-ls": {
-              "desc": ""
-            }
-          },
-          "local_id": {
-            "type": "integer",
-            "x-ls": {
-              "desc": ""
+              "desc": "Description"
             }
           },
           "user_id": {
             "type": "integer",
             "x-ls": {
-              "desc": ""
+              "desc": "User"
             }
           },
-          "data": {
-            "type": "string",
-            "x-ls": {
-              "desc": "Data"
-            }
-          },
-          "qt": {
+          "client_id": {
             "type": "integer",
             "x-ls": {
-              "desc": "Quantidade"
+              "desc": "Client"
             }
           },
-          "obs": {
-            "type": "string",
+          "tenant_id": {
+            "type": "integer",
             "x-ls": {
-              "desc": "Observações"
-            },
-            "maxLength": 65535
+              "desc": "Tenant"
+            }
           }
         },
         "x-ls": {
           "belongsTo": {
-            "artigo_id": {
-              "name": "artigos_fk",
-              "columnName": "artigo_id",
-              "tableName": "Movimentos",
-              "referencedTableName": "Artigos",
+            "client_id-Work": {
+              "name": "FK_W_Clients",
+              "columnName": "client_id",
+              "tableName": "Work",
+              "referencedTableName": "Clients",
               "referencedColumnName": "id",
               "summaryProperty": "id"
             },
-            "local_id": {
-              "name": "locais_fk",
-              "columnName": "local_id",
-              "tableName": "Movimentos",
-              "referencedTableName": "Locais",
+            "tenant_id-Work": {
+              "name": "FK_W_Tenants",
+              "columnName": "tenant_id",
+              "tableName": "Work",
+              "referencedTableName": "Tenants",
               "referencedColumnName": "id",
               "summaryProperty": "id"
             },
-            "user_id": {
-              "name": "users_fk",
+            "user_id-Work": {
+              "name": "FK_W_Users",
               "columnName": "user_id",
-              "tableName": "Movimentos",
+              "tableName": "Work",
               "referencedTableName": "Users",
               "referencedColumnName": "id",
               "summaryProperty": "id"
             }
           },
           "hasMany": {}
-        }
-      },
-      "tipos": {
-        "type": "object",
-        "properties": {
-          "nome": {
-            "type": "string",
-            "x-ls": {
-              "desc": "Nome"
-            },
-            "maxLength": 80
-          }
-        },
-        "x-ls": {
-          "belongsTo": {},
-          "hasMany": {
-            "tipo_id": {
-              "name": "FK_tipos_id",
-              "columnName": "tipo_id",
-              "tableName": "Caracteristicas",
-              "referencedTableName": "Tipos",
-              "referencedColumnName": "id",
-              "summaryProperty": "id"
-            }
-          }
-        }
-      },
-      "unidades": {
-        "type": "object",
-        "properties": {
-          "nome": {
-            "type": "string",
-            "x-ls": {
-              "desc": "Nome"
-            },
-            "maxLength": 80
-          }
-        },
-        "x-ls": {
-          "belongsTo": {},
-          "hasMany": {
-            "unidade_id": {
-              "name": "unidade_fk",
-              "columnName": "unidade_id",
-              "tableName": "Artigos",
-              "referencedTableName": "Unidades",
-              "referencedColumnName": "id",
-              "summaryProperty": "id"
-            }
-          }
-        }
-      },
-      "users": {
-        "type": "object",
-        "properties": {
-          "tenant_id": {
-            "type": "integer",
-            "x-ls": {
-              "desc": ""
-            }
-          },
-          "role_id": {
-            "type": "integer",
-            "x-ls": {
-              "desc": ""
-            }
-          },
-          "name": {
-            "type": "string",
-            "x-ls": {
-              "desc": ""
-            },
-            "maxLength": 191
-          },
-          "email": {
-            "type": "string",
-            "x-ls": {
-              "desc": ""
-            },
-            "maxLength": 191
-          },
-          "is_verified": {
-            "type": "integer",
-            "x-ls": {
-              "desc": ""
-            }
-          },
-          "password": {
-            "type": "string",
-            "x-ls": {
-              "desc": ""
-            },
-            "maxLength": 191
-          },
-          "remember_token": {
-            "type": "string",
-            "x-ls": {
-              "desc": ""
-            },
-            "maxLength": 100
-          }
-        },
-        "x-ls": {
-          "belongsTo": {},
-          "hasMany": {
-            "user_id": {
-              "name": "users_fk",
-              "columnName": "user_id",
-              "tableName": "Movimentos",
-              "referencedTableName": "Users",
-              "referencedColumnName": "id",
-              "summaryProperty": "id"
-            }
-          }
         }
       }
     },
@@ -2019,22 +1460,22 @@
         },
         "description": "Unauthorized"
       },
-      "armazens": {
+      "Clients": {
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/armazens"
+              "$ref": "#/components/schemas/Clients"
             }
           }
         },
         "description": "Ok"
       },
-      "armazensList": {
+      "ClientsList": {
         "content": {
           "application/json": {
             "schema": {
               "items": {
-                "$ref": "#/components/schemas/armazens"
+                "$ref": "#/components/schemas/Clients"
               },
               "type": "array"
             }
@@ -2042,22 +1483,22 @@
         },
         "description": "Ok"
       },
-      "artigos": {
+      "Projects": {
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/artigos"
+              "$ref": "#/components/schemas/Projects"
             }
           }
         },
         "description": "Ok"
       },
-      "artigosList": {
+      "ProjectsList": {
         "content": {
           "application/json": {
             "schema": {
               "items": {
-                "$ref": "#/components/schemas/artigos"
+                "$ref": "#/components/schemas/Projects"
               },
               "type": "array"
             }
@@ -2065,22 +1506,22 @@
         },
         "description": "Ok"
       },
-      "caracteristicas": {
+      "Settings": {
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/caracteristicas"
+              "$ref": "#/components/schemas/Settings"
             }
           }
         },
         "description": "Ok"
       },
-      "caracteristicasList": {
+      "SettingsList": {
         "content": {
           "application/json": {
             "schema": {
               "items": {
-                "$ref": "#/components/schemas/caracteristicas"
+                "$ref": "#/components/schemas/Settings"
               },
               "type": "array"
             }
@@ -2088,22 +1529,22 @@
         },
         "description": "Ok"
       },
-      "caracterizar": {
+      "Tenants": {
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/caracterizar"
+              "$ref": "#/components/schemas/Tenants"
             }
           }
         },
         "description": "Ok"
       },
-      "caracterizarList": {
+      "TenantsList": {
         "content": {
           "application/json": {
             "schema": {
               "items": {
-                "$ref": "#/components/schemas/caracterizar"
+                "$ref": "#/components/schemas/Tenants"
               },
               "type": "array"
             }
@@ -2111,22 +1552,22 @@
         },
         "description": "Ok"
       },
-      "error": {
+      "Users": {
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/error"
+              "$ref": "#/components/schemas/Users"
             }
           }
         },
         "description": "Ok"
       },
-      "errorList": {
+      "UsersList": {
         "content": {
           "application/json": {
             "schema": {
               "items": {
-                "$ref": "#/components/schemas/error"
+                "$ref": "#/components/schemas/Users"
               },
               "type": "array"
             }
@@ -2134,137 +1575,22 @@
         },
         "description": "Ok"
       },
-      "inventarios": {
+      "Work": {
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/inventarios"
+              "$ref": "#/components/schemas/Work"
             }
           }
         },
         "description": "Ok"
       },
-      "inventariosList": {
+      "WorkList": {
         "content": {
           "application/json": {
             "schema": {
               "items": {
-                "$ref": "#/components/schemas/inventarios"
-              },
-              "type": "array"
-            }
-          }
-        },
-        "description": "Ok"
-      },
-      "locais": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/locais"
-            }
-          }
-        },
-        "description": "Ok"
-      },
-      "locaisList": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "items": {
-                "$ref": "#/components/schemas/locais"
-              },
-              "type": "array"
-            }
-          }
-        },
-        "description": "Ok"
-      },
-      "movimentos": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/movimentos"
-            }
-          }
-        },
-        "description": "Ok"
-      },
-      "movimentosList": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "items": {
-                "$ref": "#/components/schemas/movimentos"
-              },
-              "type": "array"
-            }
-          }
-        },
-        "description": "Ok"
-      },
-      "tipos": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/tipos"
-            }
-          }
-        },
-        "description": "Ok"
-      },
-      "tiposList": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "items": {
-                "$ref": "#/components/schemas/tipos"
-              },
-              "type": "array"
-            }
-          }
-        },
-        "description": "Ok"
-      },
-      "unidades": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/unidades"
-            }
-          }
-        },
-        "description": "Ok"
-      },
-      "unidadesList": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "items": {
-                "$ref": "#/components/schemas/unidades"
-              },
-              "type": "array"
-            }
-          }
-        },
-        "description": "Ok"
-      },
-      "users": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/users"
-            }
-          }
-        },
-        "description": "Ok"
-      },
-      "usersList": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "items": {
-                "$ref": "#/components/schemas/users"
+                "$ref": "#/components/schemas/Work"
               },
               "type": "array"
             }
@@ -2349,6 +1675,68 @@
         "schema": {
           "type": "object"
         }
+      }
+    },
+    "requestBodies": {
+      "Clients": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Clients"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "Projects": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Projects"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "Settings": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Settings"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "Tenants": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Tenants"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "Users": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Users"
+            }
+          }
+        },
+        "description": "Ok"
+      },
+      "Work": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Work"
+            }
+          }
+        },
+        "description": "Ok"
       }
     }
   }

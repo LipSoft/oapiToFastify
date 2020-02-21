@@ -6,18 +6,37 @@ import {
     } from "./schema"
 
 export default function healthHandler(server, options, next) {
-  server.get("/{{schema}}", { schema: list{{schema}} }, (req, res) => {
-    res.send({ status: "ok" })
+  server.get("/{{schema}}",
+  { schema: list{{schema}} },
+  async (req, res) => {
+      const {{schema}} = await server.db.{{schema}}.find()
+      res.send({{schema}})
+    })
+
+  server.post("/{{schema}}",
+  { schema: post{{schema}} },
+  async (req, res) => {
+      //const { quantity, product_id } = req.body
+      const {{schema}} = await server.db.{{schema}}.save({
+        ...req.body
+      })
+      res.code(201).send({{schema}})
   })
-  server.post("/{{schema}}", { schema: post{{schema}} }, (req, res) => {
-    res.send({ status: "ok" })
-  })
-  server.get("/{{schema}}/:id", { schema: get{{schema}} }, (req, res) => {
-    res.send({ status: "ok" })
-  })
-  server.delete("/{{schema}}/:id", { schema: delete{{schema}} }, (req, res) => {
-    res.send({ status: "ok" })
-  })
+
+  server.get("/{{schema}}/:id",
+  { schema: get{{schema}} },
+  async (req, res) => {
+      const {{schema}} = await server.db.{{schema}}.findOne(req.params.id)
+      res.send({{schema}})
+    })
+
+  server.delete("/{{schema}}/:id",
+  { schema: delete{{schema}} },
+  async (req, res) => {
+      const {{schema}} = await server.db.{{schema}}.findOne(req.params.id)
+      await server.db.{{schema}}.remove({{schema}})
+      res.code(200).send({})
+    })
 
   next()
 }

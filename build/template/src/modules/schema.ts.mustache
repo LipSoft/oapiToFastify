@@ -1,8 +1,67 @@
-export const list{{schema}} = {{{schemaValue}}}
+export const {{schema}} = {{{entity}}}
 
-export const post{{schema}} = {{{schemaValue}}}
+export const list{{schema}} = {
+  summary: "list {{schema}}",
+  description: "list {{schema}}",
+  response: {
+    200: {
+      type: "array",
+      items: {
+        properties: {{schema}}
+      }
+    }
+  }
+}
 
-export const get{{schema}} = {{{schemaValue}}}
+export const post{{schema}} = {
+  summary: "create {{schema}}",
+  description: "create {{schema}}",
+  body: {
+    type: "object",
+    required: [],
+    properties: {
+    }
+  },
+  response: {
+    201: {
+      type: "object",
+      properties: {{schema}}
+    }
+  }
+}
 
-export const delete{{schema}} = {{{schemaValue}}}
+export const get{{schema}} = {
+    summary: "get {{schema}}",
+  description: "get {{schema}}",
+  params: {
+    type: "object",
+    required: ["id"],
+    properties: {
+      id: { type: "string" }
+    }
+  },
+  response: {
+    200: {
+      type: "object",
+      properties: {{schema}}
+    }
+  }
+}
+
+export const delete{{schema}} = {
+    summary: "delete {{schema}}",
+  description: "delete {{schema}}",
+  params: {
+    type: "object",
+    required: ["id"],
+    properties: {
+      id: { type: "string" }
+    }
+  },
+  response: {
+    200: {
+      type: "object"
+    }
+  }
+}
 
