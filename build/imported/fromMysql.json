@@ -1230,10 +1230,11 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "integer",
+            "type": "string",
             "x-ls": {
               "desc": "Name"
-            }
+            },
+            "maxLength": 200
           }
         },
         "x-ls": {

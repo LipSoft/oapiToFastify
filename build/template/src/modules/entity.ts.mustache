@@ -17,7 +17,8 @@ export class {{schema}} {
   id: number
 
   {{#belongsTo}}
-  @ManyToOne(type => {{{referencedTableName}}}, {{{referencedTableName}}} => {{{referencedTableName}}}.{{{tableName}}})
+  @ManyToOne(type => {{{referencedTableName}}}, {{{referencedTableName}}} => {{{referencedTableName}}}.{{{tableName}}}, { eager: true } )
+  @JoinColumn({ name: "{{{columnName}}}" })
   {{{referencedTableName}}}: {{{referencedTableName}}}
 
   {{/belongsTo}}
